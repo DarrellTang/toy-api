@@ -54,7 +54,7 @@ Override the port by supplying `-e PORT=9090` and adjusting the published port, 
 docker run --rm -p 9090:9090 -e PORT=9090 toy-api
 ```
 
-Images built on the `main` branch are automatically pushed to GitHub Container Registry under `ghcr.io/<owner>/<repo>`. Pull the latest branch image with:
+Images built on the `main` branch are automatically pushed to GitHub Container Registry under `ghcr.io/<owner>/<repo>` with both `linux/amd64` and `linux/arm64` support. Pull the latest branch image with:
 
 ```bash
 docker pull ghcr.io/<owner>/<repo>:main
@@ -65,7 +65,7 @@ docker pull ghcr.io/<owner>/<repo>:main
 GitHub Actions run automatically:
 
 - Pull requests targeting `main` execute `go test ./...` to guard merges.
-- Commits on `main` build and publish the Docker image to GHCR to validate the Dockerfile.
+- Commits on `main` build and publish the multi-architecture Docker image to GHCR to validate the Dockerfile.
 
 ## Next Steps
 
