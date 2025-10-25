@@ -1,0 +1,12 @@
+# Go build artifacts
+bin/
+*.log
+*.out
+
+# VCS
+.git
+.gitignore
+
+# IDE/editor configs
+.vscode/
+.idea/
